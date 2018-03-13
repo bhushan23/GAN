@@ -1,0 +1,33 @@
+CUDA:  True
+Files already downloaded
+AutoEncoder (
+  (encoder): Sequential (
+    (0): Linear (784 -> 128)
+    (1): ReLU (inplace)
+    (2): Linear (128 -> 64)
+    (3): ReLU (inplace)
+    (4): Linear (64 -> 12)
+    (5): ReLU (inplace)
+    (6): Linear (12 -> 3)
+  )
+  (decoder): Sequential (
+    (0): Linear (3 -> 12)
+    (1): ReLU (inplace)
+    (2): Linear (12 -> 64)
+    (3): ReLU (inplace)
+    (4): Linear (64 -> 128)
+    (5): ReLU (inplace)
+    (6): Linear (128 -> 784)
+    (7): Tanh ()
+  )
+)
+Epoch [1/100], Loss:0.2006
+Epoch [11/100], Loss:0.1396
+Epoch [21/100], Loss:0.1312
+Epoch [31/100], Loss:0.1311
+Epoch [41/100], Loss:0.1261
+Epoch [51/100], Loss:0.1247
+Epoch [61/100], Loss:0.1179
+Epoch [71/100], Loss:0.1181
+Epoch [81/100], Loss:0.1263
+Epoch [91/100], Loss:0.1162
