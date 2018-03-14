@@ -30,7 +30,7 @@ I am experimenting with different known GAN architecture and also trying out on 
      ![Loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Loss_Plot_Vanilla_Min_Co-Operative_GAN_200.png)
   * With Max Loss:
       
-      ![Vanilla Max GAN]()
+      ![Vanilla Max GAN](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Max/Max_Multiple_Gens.gif)
       
       ![Loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Max/Loss_Plot_Vanilla_Max_Co-Operative_GAN_200.png)
   * With Random selection:
