@@ -13,7 +13,7 @@ from torchvision import transforms
 import torchvision
 import os
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import torchvision.utils as tutils
 import imageio
 import pickle
@@ -305,7 +305,7 @@ BestPerformingGenerator = train(0, num_epochs)
 
 
 # Plot the Loss for Generator and Discriminator
-lossManager.drawLossPlot(showPlot = True, savePlot = False)
+#lossManager.drawLossPlot(showPlot = True, savePlot = False)
 
 
 # In[70]:
