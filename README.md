@@ -27,7 +27,7 @@ I am experimenting with different known GAN architecture and also trying out on 
      
      ![Vanilla Min_GAN](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Min_Multiple_Gens.gif)
      
-     ![Loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Loss_Plot_Vanilla_Min_Co-Operative_GAN_200.png)
+     ![Loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Vanilla%20GAN%20LossLoss_Plot_Vanilla_GAN_200.png)
   * With Max Loss:
       
       ![Vanilla Max GAN](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Max/Max_Multiple_Gens.gif)
@@ -45,4 +45,4 @@ I am experimenting with different known GAN architecture and also trying out on 
       ![loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min_D_Once/Loss_Plot_Vanilla_Min_Same_Noise_Co-Operative_GAN_200.png)
       
   ## DC-GAN
-   Under Implementation
+   * Implemented for CelebA dataset: [ComputerVision Repo](https://github.com/bhushan23/Computer-Vision/tree/master/CelebA)
