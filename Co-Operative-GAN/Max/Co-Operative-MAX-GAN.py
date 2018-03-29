@@ -13,7 +13,9 @@ from torchvision import transforms
 import torchvision
 import os
 import numpy as np
-#import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
 import torchvision.utils as tutils
 import imageio
 import pickle
@@ -181,7 +183,7 @@ class Generator(nn.Module):
 #Gen = Generator()
 Generators = []
 GOptimizers = []
-NumberOfGenerators = 3
+NumberOfGenerators = 8
 for i in range(NumberOfGenerators):
     #Generators.append(copy.deepcopy(Generator))
     Generators.append(Generator())
@@ -265,7 +267,7 @@ def train(BestPerformingGenerator, num_epochs = 10, d_iter = 1):
                 each.zero_grad()
                 G_loss.backward()
                 each_opt.step()
-            
+        
         BestPerformingGenerator = lossList.index(max(lossList)) # earlier was min
         print lossList
         for i in range(0, NumberOfGenerators):
@@ -305,7 +307,7 @@ BestPerformingGenerator = train(0, num_epochs)
 
 
 # Plot the Loss for Generator and Discriminator
-#lossManager.drawLossPlot(showPlot = True, savePlot = False)
+# lossManager.drawLossPlot(showPlot = True, savePlot = False)
 
 
 # In[70]:
@@ -316,19 +318,19 @@ BestPerformingGenerator = train(0, num_epochs)
 
 # In[16]:
 
+lossManager.drawLossPlot(showPlot = False, savePlot = True)
 
 # Generate GIF
-generate_animation(path, num_epochs, 'Max_Multiple_Gens')
+generate_animation(path, num_epochs, 'Min_Multiple_Gens')
 
 
 # In[18]:
 
 
 # Save the model
+pickle.dump(lossManager, open( "LossManager.pkl", "wb" ))
 torch.save(Generators[BestPerformingGenerator].state_dict(), './Generator.pkl')
 torch.save(Discriminator.state_dict(), './Discriminator.pkl')
-pickle.dump(lossManager, open( "LossManager.pkl", "wb" ))
-
 
 # In[74]:
 
@@ -350,4 +352,5 @@ pickle.dump(lossManager, open( "LossManager.pkl", "wb" ))
 # Load model for debugging and testing
 #Generator.load_state_dict(torch.load('Generator200.pkl'))
 #Discriminator.load_state_dict(torch.load('Discriminator200.pkl'))
+
 
