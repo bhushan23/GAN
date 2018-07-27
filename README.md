@@ -1,11 +1,14 @@
 # GAN
+I am experimenting with different known GAN architectures and trying out new ideas here
 
-I am experimenting with different known GAN architecture and also trying out on new GAN ideas
+## What has been tried yet
+1. Co-Operative GANs
+   Multiple generators are trained together and best performing generator's weights are copied over for next iteration
 
 ## AutoEncoders
   * Basic AutoEncoder on MNIST
   
-    ![AutoEncoder Output](https://github.com/bhushan23/GAN/blob/master/AutoEncoder/genImg/image_9.png)
+  ![AutoEncoder Output](https://github.com/bhushan23/GAN/blob/master/AutoEncoder/genImg/image_9.png)
 
 ## VAE 
   * Variational AutoEncoder on MNIST 
@@ -15,10 +18,8 @@ I am experimenting with different known GAN architecture and also trying out on 
 ## Vanilla GAN
   * Simple Fully connected Generative Adversarial Network
   
-    ![Vanilla GAN](https://github.com/bhushan23/GAN/blob/master/Vanilla%20GAN/Vanilla_Gan.gif) 
-    
-    ![LossGraph](https://github.com/bhushan23/GAN/blob/master/Vanilla%20GAN/Loss_Plot_Vanilla_Min_GAN_200.png)
-  
+  ![Vanilla Min_GAN](https://github.com/bhushan23/GAN/blob/master/Vanilla%20GAN/Vanilla_Gan.gif) <img src="https://github.com/bhushan23/GAN/blob/master/Vanilla%20GAN/Loss_Plot_Vanilla_Min_GAN_200.png" width="500">  
+
 ## Co-Operative GAN on top of Vanilla GAN
   * Multiple Generators are trained simultaneously and one performing better is choosen and copied by other Generators for next iteration.
   * Idea is to Co-Operatively improve over a period of time
@@ -27,8 +28,10 @@ I am experimenting with different known GAN architecture and also trying out on 
  
 ## Results
   ### With Min Loss:
+  
 ![Vanilla Min_GAN](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Min_Multiple_Gens.gif)
 <img src="https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Min/Vanilla%20GAN%20LossLoss_Plot_Vanilla_GAN_200.png" width="500">
+
   ### With Max Loss:
 ![Vanilla Max GAN](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Max/Max_Multiple_Gens.gif)
 ![Loss](https://github.com/bhushan23/GAN/blob/master/Co-Operative-GAN/Max/Loss_Plot_Vanilla_Max_Co-Operative_GAN_200.png)
@@ -51,8 +54,5 @@ I am experimenting with different known GAN architecture and also trying out on 
 ## Why Min loss does not work well enough
  * If one generator collapses, then it will generate minimum loss and fails
 
- 
-  
-      
-  ## DC-GAN
-   * Implemented for CelebA dataset: [ComputerVision Repo](https://github.com/bhushan23/Computer-Vision/tree/master/CelebA)
+## DC-GAN
+ * Implemented for CelebA dataset: [ComputerVision Repo](https://github.com/bhushan23/Computer-Vision/tree/master/CelebA)
